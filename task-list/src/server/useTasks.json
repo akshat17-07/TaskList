@@ -1,0 +1,24 @@
+{
+    "task": [
+        {
+            "id": 1,
+            "name": "Project Setup & Routing",
+            "completed": "completed"
+        },
+        {
+            "id": 2,
+            "name": " API Integration",
+            "completed": "in progress"
+        },
+        {
+            "id": 3,
+            "name": " State Management using Context API",
+            "completed": "not started"
+        },
+        {
+            "id": 4,
+            "name": "Task Operations",
+            "completed": "not started"
+        }
+    ]
+}
