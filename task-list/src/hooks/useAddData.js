@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function useAddData(url) {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
     const [success, setSuccess] = useState('')
+
+    
 
     function addData(body) {
         setLoading(true);
@@ -29,7 +31,6 @@ function useAddData(url) {
         })
         .finally(() => setLoading(false));
     }
-
     return { addData, loading, error, success};
 }
 

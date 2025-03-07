@@ -1,7 +1,8 @@
-import {memo} from 'react'
+import {memo, lazy, Suspense} from 'react'
 import useTasks from '../hooks/useTasks';
 import { Link } from 'react-router-dom';
-import Task from './Task'
+
+const Task = lazy(() => import('./Task'))
 
 function TaskList(){
 
@@ -26,7 +27,13 @@ function TaskList(){
             <ul>
                 {data && 
                 data.map(d => {
-                    return (<Task d={d}/>)
+                    return (
+                        <li key={d.id}>
+                        <Suspense fallback={<h2>Loading</h2>}>
+                            <Task d={d} taskDelete={taskDelete}/>
+                        </Suspense>
+                        </li>
+                    )
                     })}
             </ul>
         </>

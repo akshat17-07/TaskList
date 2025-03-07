@@ -1,15 +1,16 @@
 import {memo} from 'react'
+import { Link } from 'react-router-dom'
 
-function Task({d}){
+function Task({key, d, taskDelete}){
     return (
-        <li key={d.id}>
+        <>
             {d.name} <br/>
             {d.completed.toString()} 
             <Link to={`edit/${d.id}`}>
                 <button>Edit</button>
             </Link>
             <button onClick={(event) => taskDelete(event, d.id)}>Delete</button>
-        </li>)
+        </>)
 }
 
 export default memo(Task)

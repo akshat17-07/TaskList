@@ -5,18 +5,22 @@ function AddTask() {
     const [task, setTask] = useState("Add new Task");
     const [completed, setCompleted] = useState(false);
     const { addData, loading, error, success } = useAddData("http://localhost:3000/task");
-
+    const [count, setCount] = useState(10)
+    
     function submitNewData(event) {
         event.preventDefault();
         const body = {
             name: task,
             completed: completed ? "true" : "false"
         };
+        setCount(prevCount => prevCount+1)
         addData(body);
-        setTask("")
-        setCompleted(false)
+        setTask(`Task: ${count}`)
+        setCompleted(() => {
+            return count % 1 === 0? true: false
+        })
+        
     }
-
     return (
         <>
             <form>
