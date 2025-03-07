@@ -48,11 +48,22 @@ const useTasks = (url) => {
                         console.log(res)
                         setData(res)
                         setLoading(false)
+                        setData(prevData => [...prevData, 
+                            {
+                                id: 0,
+                                name: "Do not Delete or Edit for testing",
+                                completed: true
+                            }
+                        ])
+                        
                 })
                 .catch(err => {
                     setError(err.message)
                 })
+                
         }, [url]);
+
+        
 
         return {data, loading, error, success, deleteData}
     }

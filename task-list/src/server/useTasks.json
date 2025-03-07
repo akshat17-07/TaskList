@@ -2,13 +2,8 @@
   "task": [
     {
       "id": "0dce",
-      "name": "Task 1",
+      "name": "Task 4 Edited",
       "completed": "false"
-    },
-    {
-      "id": "0df8",
-      "name": "Task 2",
-      "completed": "true"
     }
   ]
 }
