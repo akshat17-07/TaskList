@@ -1,24 +1,79 @@
 {
-    "task": [
-        {
-            "id": 1,
-            "name": "Project Setup & Routing",
-            "completed": "completed"
-        },
-        {
-            "id": 2,
-            "name": " API Integration",
-            "completed": "in progress"
-        },
-        {
-            "id": 3,
-            "name": " State Management using Context API",
-            "completed": "not started"
-        },
-        {
-            "id": 4,
-            "name": "Task Operations",
-            "completed": "not started"
-        }
-    ]
+  "task": [
+    {
+      "id": "1",
+      "name": "Project Setup & Routing",
+      "completed": "true"
+    },
+    {
+      "id": "2",
+      "name": " API Integration",
+      "completed": "false"
+    },
+    {
+      "id": "3",
+      "name": " State Management using Context API",
+      "completed": "false"
+    },
+    {
+      "id": "4",
+      "name": "Task Operations",
+      "completed": "false"
+    },
+    {
+      "id": "90d6",
+      "name": "Add new Task",
+      "completed": "false"
+    },
+    {
+      "id": "3bb9",
+      "name": "Complete Home Work",
+      "completed": "false"
+    },
+    {
+      "id": "cb77",
+      "name": "done with add data",
+      "completed": "true"
+    },
+    {
+      "id": "9b8b",
+      "name": "done with add data",
+      "completed": "true"
+    },
+    {
+      "id": "1986",
+      "name": "Add new Task",
+      "completed": "true"
+    },
+    {
+      "id": "b864",
+      "name": "Add new Task",
+      "completed": "false"
+    },
+    {
+      "id": "567f",
+      "name": "Add new Task",
+      "completed": "false"
+    },
+    {
+      "id": "d5b1",
+      "name": "Deleted not wanted Task",
+      "completed": "false"
+    },
+    {
+      "id": "3a69",
+      "name": "Deleted not wanted Task",
+      "completed": "false"
+    },
+    {
+      "id": "7199",
+      "name": "Testing 1",
+      "completed": "true"
+    },
+    {
+      "id": "1729",
+      "name": "Testing 2",
+      "completed": "false"
+    }
+  ]
 }
