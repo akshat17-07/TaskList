@@ -4,7 +4,7 @@ import useTasks from '../hooks/useTasks';
 
 function Task(){
 
-    const {data, loading, error} = useTasks('http://localhost:3000/task')
+    const {data, loading, error, success, deleteData} = useTasks('http://localhost:3000/task')
 
     
     
@@ -16,8 +16,16 @@ function Task(){
         return (<h1>Loading...</h1>)
     }
 
+    function taskDelete(event, id) {
+        event.preventDefault();
+        deleteData(id);
+    }
+
     return (
+        
+
         <>
+            {success != '' && success}
             <ul>
                 {data && 
                 data.map(d => {
@@ -25,7 +33,7 @@ function Task(){
                             {d.name} <br/>
                             {d.completed} 
                             <button>Edit</button>
-                            <button>Delete</button>
+                            <button onClick={(event) => taskDelete(event, d.id)}>Delete</button>
                         </li>)
                     })}
             </ul>
