@@ -1,7 +1,7 @@
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Nav from './Layout/Nav'
 import MainLayout from './Layout/MainLayout'
-import Task from './pages/Task'
+import TaskList from './pages/TaskList'
 import AddTask from './pages/AddTask'
 import EditTask from './pages/EditTask'
 import NotFound from './pages/NotFound'
@@ -18,7 +18,7 @@ function App() {
       {/*This is route for main component*/}
       <Routes>
         <Route path="/" element={<MainLayout />}>
-          <Route index element={<Task />} />
+          <Route index element={<TaskList />} />
           <Route path="add" element={<AddTask />} />
           <Route path="edit/:id" element={<EditTask />} />
           <Route path="*" element={<NotFound />} />
