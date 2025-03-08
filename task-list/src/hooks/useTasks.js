@@ -37,7 +37,9 @@ const useTasks = (url) => {
     useEffect(() => {
             setLoading(true)
             
-            fetch(url)
+            const path = url 
+
+            fetch(path)
                 .then(res => {
                     if (!res.ok){
                         throw Error("could not fetch the data.")
@@ -45,7 +47,6 @@ const useTasks = (url) => {
                     return res.json();
                 })
                 .then(res =>{
-                        console.log(res)
                         setData(res)
                         setLoading(false)
                         setData(prevData => [...prevData, 

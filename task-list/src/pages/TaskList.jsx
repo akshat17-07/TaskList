@@ -1,14 +1,16 @@
 import {memo, lazy, Suspense} from 'react'
 import useTasks from '../hooks/useTasks';
-import { Link } from 'react-router-dom';
+import { useLocation  } from 'react-router-dom';
 
-const Task = lazy(() => import('./Task'))
+const Task = lazy(() => import('./Task'));
 
 function TaskList(){
 
     const {data, loading, error, success, deleteData} = useTasks('http://localhost:3000/task')
-
-
+    const location = useLocation();
+    const searchParams = new URLSearchParams(location.search);
+    const query = searchParams.get('limit');
+    
     if (loading){
         return (<h1>Loading...</h1>)
     }
@@ -26,9 +28,9 @@ function TaskList(){
             {success != '' && success}
             <ul>
                 {data && 
-                data.map(d => {
+                data.slice(0, query ? query : data.length).map((d, index) => {
                     return (
-                        <li key={d.id}>
+                        <li key={index}>
                         <Suspense fallback={<h2>Loading</h2>}>
                             <Task d={d} taskDelete={taskDelete}/>
                         </Suspense>
