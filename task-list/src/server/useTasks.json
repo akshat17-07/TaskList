@@ -1,19 +1,9 @@
 {
   "task": [
     {
-      "id": "8d58",
-      "name": "Task: 1",
-      "completed": "true"
-    },
-    {
       "id": "2c14",
       "name": "new Task 5",
       "completed": "true"
-    },
-    {
-      "id": "a21b",
-      "name": "Add new Task",
-      "completed": "false"
     },
     {
       "id": "22d1",
@@ -5198,6 +5188,11 @@
     {
       "id": "e820",
       "name": "Task: 23",
+      "completed": "true"
+    },
+    {
+      "id": "529a",
+      "name": "Completed Project",
       "completed": "true"
     }
   ]
