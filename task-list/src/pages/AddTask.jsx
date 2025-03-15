@@ -7,7 +7,6 @@ function AddTask() {
     const [task, setTask] = useState("Add new Task");
     const [completed, setCompleted] = useState(false);
     const { addData, loading, error, success } = useAddData("http://localhost:3000/task");
-    const [count, setCount] = useState(10);
 
     const { theme } = useContext(ThemeContext);
 
@@ -15,12 +14,9 @@ function AddTask() {
         event.preventDefault();
         const body = {
             name: task,
-            completed: completed ? "true" : "false"
+            completed: completed ? true : false
         };
-        setCount(prevCount => prevCount + 1);
         addData(body);
-        setTask(`Task: ${count}`);
-        setCompleted(() => count % 1 === 0);
     }
 
     const formContainerClass = clsx(

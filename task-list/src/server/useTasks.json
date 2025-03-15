@@ -1,19 +1,39 @@
 {
   "task": [
     {
-      "id": "7231",
-      "name": "Task 2",
+      "id": "8fba",
+      "name": "Add Pending Completed Filters to the task",
+      "completed": false
+    },
+    {
+      "id": "9cdf",
+      "name": "Add new add search in one component on nav Bar",
+      "completed": false
+    },
+    {
+      "id": "ff4f",
+      "name": "toggle edit theme should go on the nav bar",
+      "completed": "true"
+    },
+    {
+      "id": "b7a3",
+      "name": "add react-icon for edit delete and completed task",
       "completed": true
     },
     {
-      "id": "5e04",
-      "name": "Task 3",
-      "completed": true
+      "id": "2c9d",
+      "name": "Make it responsive for mobile",
+      "completed": false
     },
     {
-      "id": "e063",
-      "name": "Task 4 new edited",
-      "completed": true
+      "id": "07b7",
+      "name": "Combine edit and add form",
+      "completed": false
+    },
+    {
+      "id": "b86b",
+      "name": "Toggle edit and completed filters on nav bar",
+      "completed": false
     }
   ]
 }

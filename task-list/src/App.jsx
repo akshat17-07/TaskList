@@ -3,13 +3,12 @@ import Nav from './Layout/Nav';
 import MainLayout from './Layout/MainLayout';
 import React, { lazy, Suspense, createContext, useState, useMemo } from "react";
 import TaskList from './pages/TaskList';
-import Button from './Layout/Button';
 
     // add pending and completed filters to the task
     // add search in one component on nav bar
     // toggle theme should go on the navs completed
-    // toggle edit and completed 
-    // add react-icon for edit delete and complet
+    // add toggle edit and completed 
+    // add react-icon for edit delete and completed Completed
     // make it responsive for mobile
     // edit form should be the add form
 
