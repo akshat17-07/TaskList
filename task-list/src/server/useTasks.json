@@ -1,29 +1,19 @@
 {
   "task": [
     {
-      "id": "9470",
-      "name": "Task1",
-      "completed": "true"
-    },
-    {
       "id": "7231",
       "name": "Task 2",
-      "completed": "false"
+      "completed": true
     },
     {
       "id": "5e04",
       "name": "Task 3",
-      "completed": "true"
+      "completed": true
     },
     {
       "id": "e063",
       "name": "Task 4 new edited",
-      "completed": "false"
-    },
-    {
-      "id": "fb17",
-      "name": "Add new Task Add new Task Add new Task Add new Task Add new Task ",
-      "completed": "false"
+      "completed": true
     }
   ]
 }

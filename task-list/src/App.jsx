@@ -7,9 +7,9 @@ import Button from './Layout/Button';
 
     // add pending and completed filters to the task
     // add search in one component on nav bar
-    // toggle theme should go on the navs
+    // toggle theme should go on the navs completed
     // toggle edit and completed 
-    // add react-icon for edit delete and completed
+    // add react-icon for edit delete and complet
     // make it responsive for mobile
     // edit form should be the add form
 

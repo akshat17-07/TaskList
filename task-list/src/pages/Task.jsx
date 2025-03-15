@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 import {clsx} from 'clsx'
 import { ThemeContext } from '../App'
 import { useContext } from 'react'
+import useEditTask from '../hooks/useEditTask'
+
 function Task({key, d, taskDelete}){
 
     const {theme} = useContext(ThemeContext)
@@ -15,10 +17,13 @@ function Task({key, d, taskDelete}){
         }
     )
 
+        const {flipTask} = useEditTask(d.id, "http://localhost:3000/task")
+
+
     return (
-            <div className={continerClass}>
+            <div className={continerClass} onClick={flipTask}>
                 <span className="flex-1">{d.name}</span>
-                <span className="ml-auto">{d.completed === 'true'? 'Completed' : 'To Do'}</span>
+                <span className="ml-auto">{d.completed? 'Completed' : 'To Do'}</span>
                 <Link to={`edit/${d.id}`} className="ml-4">
                     <button className="bg-green-500 text-white px-3 py-1 rounded">Edit</button>
                 </Link>
