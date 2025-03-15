@@ -5,6 +5,15 @@ import React, { lazy, Suspense, createContext, useState, useMemo } from "react";
 import TaskList from './pages/TaskList';
 import Button from './Layout/Button';
 
+    // add pending and completed filters to the task
+    // add search in one component on nav bar
+    // toggle theme should go on the navs
+    // toggle edit and completed 
+    // add react-icon for edit delete and completed
+    // make it responsive for mobile
+    // edit form should be the add form
+
+
 const AddTask = lazy(() => import("./pages/AddTask"));
 const EditTask = lazy(() => import("./pages/EditTask"));
 const NotFound = lazy(() => import('./pages/NotFound'));
@@ -27,7 +36,6 @@ function App() {
                     <Nav />
 
                     <div className={`flex-grow ${theme === 'light' ? 'bg-gray-100' : 'bg-gray-800'}`}>
-                        <Button />
 
                         <Suspense fallback={<h1>Loading...</h1>}>
                             <Routes>

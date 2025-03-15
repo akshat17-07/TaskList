@@ -49,13 +49,6 @@ const useTasks = (url) => {
                 .then(res =>{
                         setData(res)
                         setLoading(false)
-                        setData(prevData => [...prevData, 
-                            {
-                                id: 0,
-                                name: "Do not Delete or Edit for testing",
-                                completed: true
-                            }
-                        ])
                         
                 })
                 .catch(err => {

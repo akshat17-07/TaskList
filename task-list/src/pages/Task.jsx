@@ -9,7 +9,7 @@ function Task({key, d, taskDelete}){
 
     const continerClass = clsx(
         {
-            "flex items-center justify-between mt-5 p-5": true,
+            "flex items-center justify-between mt-5 p-1": true,
             'bg-gray-700': theme != 'light',
             'bg-white': theme === 'light'
         }
@@ -18,8 +18,7 @@ function Task({key, d, taskDelete}){
     return (
             <div className={continerClass}>
                 <span className="flex-1">{d.name}</span>
-                
-                <span className="ml-auto">{d.completed? 'Completed' : 'To Do'}</span>
+                <span className="ml-auto">{d.completed === 'true'? 'Completed' : 'To Do'}</span>
                 <Link to={`edit/${d.id}`} className="ml-4">
                     <button className="bg-green-500 text-white px-3 py-1 rounded">Edit</button>
                 </Link>

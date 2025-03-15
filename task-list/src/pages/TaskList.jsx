@@ -22,18 +22,18 @@ function TaskList() {
         deleteData(id);
     }
 
+
     return (
         <div className={`p-5 ${theme === 'light' ? 'bg-gray-100 text-black' : 'bg-gray-900 text-white'}`}>
             {error && <h1>Error: {error}</h1>}
             {success && success}
+            {data && data.length === 0 && <h1>There are no data</h1>}
 
             <ul>
                 {data &&
                     data.slice(0, query ? query : data.length).map((d, index) => (
                         <li key={index}>
-                            <Suspense fallback={<h2>Loading</h2>}>
                                 <Task d={d} taskDelete={taskDelete} />
-                            </Suspense>
                         </li>
                     ))}
             </ul>
