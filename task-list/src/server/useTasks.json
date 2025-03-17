@@ -34,6 +34,11 @@
       "id": "b86b",
       "name": "Toggle edit and completed filters on nav bar",
       "completed": true
+    },
+    {
+      "id": "7be3",
+      "name": "Run json server with app",
+      "completed": true
     }
   ]
 }
