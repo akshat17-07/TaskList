@@ -2,7 +2,7 @@ import {memo} from 'react'
 import { Link } from 'react-router-dom'
 import {clsx} from 'clsx'
 import { ThemeContext } from '../App'
-import { useContext } from 'react'
+import { useContext, useState } from 'react'
 import useEditTask from '../hooks/useEditTask'
 import { FaEdit } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
@@ -13,6 +13,7 @@ import { RiStickyNote2Fill } from "react-icons/ri";
 function Task({key, d, taskDelete}){
 
     const {theme} = useContext(ThemeContext)
+
 
     const continerClass = clsx(
         {
@@ -27,6 +28,7 @@ function Task({key, d, taskDelete}){
 
     return (
             <div className={continerClass} onClick={flipTask}>
+
                 <span className="flex-1">{d.name}</span>
                 <span className="ml-auto">
                     {d.completed? 

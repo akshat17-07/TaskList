@@ -48,7 +48,6 @@ function AddTask() {
             <h2 className="md:text-xl font-semibold text-center">Add New Task</h2>
             <form onSubmit={submitNewData} className="md:mt-4 mt-2">
                 
-                {/* Task Input */}
                 <label htmlFor="task" className="block font-medium">
                     Task:
                 </label>
