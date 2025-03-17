@@ -24,7 +24,7 @@ function TaskList() {
 
 
     return (
-        <div className={`p-5 ${theme === 'light' ? 'bg-gray-100 text-black' : 'bg-gray-900 text-white'}`}>
+        <div className={`md:p-5 sm:p-2 ${theme === 'light' ? 'bg-gray-100 text-black' : 'bg-gray-900 text-white'}`}>
             {error && <h1>Error: {error}</h1>}
             {success && success}
             {data && data.length === 0 && <h1>There are no data</h1>}

@@ -8,7 +8,7 @@
     {
       "id": "9cdf",
       "name": "Add new add search in one component on nav Bar",
-      "completed": false
+      "completed": true
     },
     {
       "id": "ff4f",
@@ -33,7 +33,7 @@
     {
       "id": "b86b",
       "name": "Toggle edit and completed filters on nav bar",
-      "completed": false
+      "completed": true
     }
   ]
 }

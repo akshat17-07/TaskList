@@ -16,7 +16,7 @@ function Task({key, d, taskDelete}){
 
     const continerClass = clsx(
         {
-            "flex items-center justify-between mt-5 p-1": true,
+            "flex items-center justify-between sm:mt-2 md:mt-5 mt-1 sm:p-0 p-1": true,
             'bg-gray-700': theme != 'light',
             'bg-white': theme === 'light'
         }
@@ -30,20 +30,20 @@ function Task({key, d, taskDelete}){
                 <span className="flex-1">{d.name}</span>
                 <span className="ml-auto">
                     {d.completed? 
-                    <div className='bg-green-500 text-white px-3 py-2  rounded'>
+                    <div className='bg-green-500 sm:px-3 sm:py-2 md:px-3  text-white px-1 py-1  rounded'>
                         <TiTick/>
                     </div> : 
-                    <div className="bg-red-500 text-white px-3 py-2 rounded ml-2">
+                    <div className="bg-red-500 text-white sm:px-3 sm:py-2 md:px-3  text-white px-1 py-1">
                         <RiStickyNote2Fill/>
                     </div>
                     }</span>
                 
                 <Link to={`edit/${d.id}`} className="ml-4">
-                    <button className="bg-green-700 text-white px-3 py-2  rounded"><FaEdit/></button>
+                    <button className="bg-green-700 text-white sm:px-3 sm:py-2 md:px-3  text-white px-1 py-1 mr-3 rounded"><FaEdit/></button>
                 </Link>
                 <button 
                     onClick={(event) => taskDelete(event, d.id)} 
-                    className="bg-red-700 text-white px-3 py-2 rounded ml-2"
+                    className="bg-red-700 text-white sm:px-3 sm:py-2 md:px-3  text-white px-1 py-1"
                 >
                     <MdDelete/>
                 </button>
