@@ -1,14 +1,9 @@
 {
   "task": [
     {
-      "id": "8fba",
-      "name": "Add Pending Completed Filters to the task",
-      "completed": true
-    },
-    {
-      "id": "9cdf",
-      "name": "Add new add search in one component on nav Bar",
-      "completed": true
+      "name": "Add Pending Completed Filters to the Task",
+      "completed": true,
+      "id": "8fba"
     },
     {
       "id": "ff4f",
@@ -28,7 +23,7 @@
     {
       "id": "07b7",
       "name": "Combine edit and add form",
-      "completed": false
+      "completed": true
     },
     {
       "id": "b86b",
@@ -36,9 +31,9 @@
       "completed": true
     },
     {
-      "id": "7be3",
-      "name": "Run json server with app",
-      "completed": true
+      "name": "Run json server when app runs",
+      "completed": true,
+      "id": "7be3"
     }
   ]
 }

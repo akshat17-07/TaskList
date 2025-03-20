@@ -41,6 +41,7 @@ function App() {
                                 <Route path="/" element={<MainLayout />}>
                                     <Route index element={<TaskList />} />
                                     <Route path="add" element={<AddTask />} />
+                                    <Route path="add/:id" element={<AddTask />} />
                                     <Route path="edit/:id" element={<EditTask />} />
                                     <Route path="*" element={<NotFound />} />
                                 </Route>

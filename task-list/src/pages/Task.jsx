@@ -40,7 +40,7 @@ function Task({key, d, taskDelete}){
                     </div>
                     }</span>
                 
-                <Link to={`edit/${d.id}`} className="ml-4">
+                <Link to={`add/${d.id}`} className="ml-4">
                     <button className="bg-green-700 text-white sm:px-3 sm:py-2 md:px-3  text-white px-1 py-1 mr-3 rounded"><FaEdit/></button>
                 </Link>
                 <button 

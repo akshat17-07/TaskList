@@ -1,22 +1,35 @@
-import { memo, useState, useContext } from "react";
+import { memo, useState, useContext, useEffect } from "react";
 import useAddData from "../hooks/useAddData";
 import { ThemeContext } from "../App";
+import { useParams } from "react-router-dom";
 import { clsx } from "clsx";
 
-function AddTask() {
-    const [task, setTask] = useState("Add new Task");
+function AddOrEditTask() {
+    const { id } = useParams();
+    const isEditing = Boolean(id);
+    const [task, setTask] = useState("");
     const [completed, setCompleted] = useState(false);
-    const { addData, loading, error, success } = useAddData("http://localhost:3000/task");
-
+    
+    const { addData, loading, error, success, fetchTask } = useAddData("http://localhost:3000/task");
+    
     const { theme } = useContext(ThemeContext);
 
-    function submitNewData(event) {
+    useEffect(() => {
+        if (isEditing) {
+            fetchTask(id).then((taskData) => {
+                if (taskData) {
+                    console.log(taskData)
+                    setTask(taskData.name || "");
+                    setCompleted(taskData.completed);
+                }
+            });
+        }
+    }, [id, isEditing]);
+
+    function handleSubmit(event) {
         event.preventDefault();
-        const body = {
-            name: task,
-            completed: completed ? true : false
-        };
-        addData(body);
+        const body = { name: task, completed };
+        addData(body, id);
     }
 
     const formContainerClass = clsx(
@@ -45,8 +58,8 @@ function AddTask() {
 
     return (
         <div className={formContainerClass}>
-            <h2 className="md:text-xl font-semibold text-center">Add New Task</h2>
-            <form onSubmit={submitNewData} className="md:mt-4 mt-2">
+            <h2 className="md:text-xl font-semibold text-center">{isEditing ? "Edit Task" : "Add New Task"}</h2>
+            <form onSubmit={handleSubmit} className="md:mt-4 mt-2">
                 
                 <label htmlFor="task" className="block font-medium">
                     Task:
@@ -73,7 +86,7 @@ function AddTask() {
                 </div>
 
                 <button type="submit" disabled={loading} className={buttonClass}>
-                    {loading ? "Submitting..." : "Submit"}
+                    {isEditing ? (loading ? "Updating..." : "Update") : (loading ? "Submitting..." : "Submit")}
                 </button>
             </form>
 
@@ -83,4 +96,4 @@ function AddTask() {
     );
 }
 
-export default memo(AddTask);
+export default memo(AddOrEditTask);
