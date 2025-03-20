@@ -12,7 +12,7 @@ A React-based task management application built with modern web technologies.
 1. Clone the repository:
 
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/akshat17-07/TaskList
    cd task-list
    ```
 
